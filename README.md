@@ -1,5 +1,4 @@
 # vuex-sample
-<<<<<<< HEAD
 
 ## Project setup
 ```
@@ -29,4 +28,3 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 =======
->>>>>>> dc8afaa272abdc2736d02e9ecc953085a9f30cd2
