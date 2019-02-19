@@ -1,10 +1,11 @@
 <template>
     <section>
-        <h1>Home</h1>
-        <p>Your power is:</p>
-        <p>{{$store.getters.power.power}}</p>
+        <h1 v-if="$store.getters.power.power">The power is yours!</h1>
+        <p v-if="$store.getters.power.power">Your power is:</p>
+        <p v-if="$store.getters.power.power">{{$store.getters.power.power}}</p>
+        <img v-if="$store.getters.power.power" class="power-img" :src="$store.getters.power.img" />
         <button @click="generatePower">Generate Power</button>
-        <router-link to="/about">Learn about this power</router-link>
+        <router-link v-if="$store.getters.power.power" to="/about">How to use in battle</router-link>
     </section>
 </template>
 
@@ -34,5 +35,19 @@
     button {
         display: block;
         margin: 0 auto 30px;
+        padding: 7px 15px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        border: 1px solid black;
+        background-color: transparent;
+        color: black;
+        border-radius: 5px;
+        transition: color .35s, background-color .35s;
+    }
+
+    button:hover {
+        color: white;
+        background-color: black;
     }
 </style>

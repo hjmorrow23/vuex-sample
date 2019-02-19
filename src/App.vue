@@ -5,12 +5,10 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
   }
 }
 </script>
@@ -24,4 +22,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.power-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
 </style>
