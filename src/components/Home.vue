@@ -4,7 +4,8 @@
         <p v-if="$store.getters.power.power">Your power is:</p>
         <p v-if="$store.getters.power.power">{{$store.getters.power.power}}</p>
         <img v-if="$store.getters.power.power" class="power-img" :src="$store.getters.power.img" />
-        <button @click="generatePower">Generate Power</button>
+        <button v-if="$store.getters.power.power" @click="generatePower">Generate New Power</button>
+        <button v-if="!$store.getters.power.power" @click="generatePower">Generate Power</button>
         <router-link v-if="$store.getters.power.power" to="/about">How to use in battle</router-link>
     </section>
 </template>
@@ -49,5 +50,10 @@
     button:hover {
         color: white;
         background-color: black;
+    }
+
+    button:active,
+    button:focus {
+        outline: none;
     }
 </style>
